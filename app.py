@@ -22,7 +22,7 @@ st.markdown(
 # --- CONFIGURACIÓN ---
 VERDE_OSCURO = '#1b4d3e'
 AMARILLO_OSCURO = '#b8860b'
-NOMBRE_IMAGEN = "foto_rugby.jpg"
+NOMBRE_IMAGEN = "crlt.png"
 
 @st.cache_data
 def load_data():
@@ -114,4 +114,5 @@ else:
         for col_id, label in metricas_dict.items():
             fig_e = go.Figure(go.Bar(x=hist_full['Activity Name'], y=hist_full[col_id], marker_color=VERDE_OSCURO))
             fig_e.update_layout(title=f"Evolución: {label}", height=300)
+
             st.plotly_chart(fig_e, use_container_width=True)
